@@ -162,7 +162,8 @@ KEYTAR_OP_RESULT FindCredentials(const std::string& service,
 
     SecretValue* secret = secret_item_get_secret(item);
     if (secret == NULL) {
-      // keystore is not open, secret is NULL which may lead to a crash in secret_value_get_text
+      // keystore is not open, secret is NULL
+      // which may lead to a crash in secret_value_get_text
       continue;
     }
 
